@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#Main environment variable
+EasyAP=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd ) #Main folder Path
+export EasyAP=$EasyAP
+
+#Add main global variable to ~/.bashrc
+if ! grep -q 'EasyAP' "$HOME/.bashrc"
+then
+   sudo sed -i '/export EasyAP/d' $HOME/.bashrc
+   echo "export EasyAP='$EasyAP'" >> $HOME/.bashrc
+fi
+source $HOME/.bashrc
+
+sleep 1
+gcc --version > tmp.txt
+if grep -q 'Ubuntu' 'tmp.txt'
+then 
+   echo "Ubuntu detected."
+   rm tmp.txt
+   echo "Installing required utilites ..."
+   sudo apt-get -y install wget curl hostapd aircrack-ng wireshark
+else
+   echo "Ubuntu not detected. Commands like 'apt-get' included in this script won't work. Run them manually"
+   rm tmp.txt
+   sleep 2
+fi
