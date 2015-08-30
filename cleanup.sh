@@ -1,5 +1,4 @@
 #!/bin/bash
-source ../init.sh
 ### CLEANUP.SH ###
 
 ##############################

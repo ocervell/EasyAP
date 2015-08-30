@@ -1,6 +1,4 @@
 #!/bin/bash
-source ../init.sh
-
 ### STOP.SH ###
 
 ##############################
@@ -71,6 +69,7 @@ esac
 echo ""
 
 echo "===> Archiving logs <==="
+sudo mkdir -p $EasyAP/archive/
 cd $EasyAP/logs
 for f in *; do sudo mv -- "$f" "$f-$(stat -c %Y "$f" | date +%Y%m%d_%H%M)"; done
 cd ..

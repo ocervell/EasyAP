@@ -1,4 +1,5 @@
 #!/bin/bash
+### CONFIGURE ###
 
 #Main environment variable
 EasyAP=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd ) #Main folder Path

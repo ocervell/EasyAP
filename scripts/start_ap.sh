@@ -1,6 +1,4 @@
 #!/bin/bash
-source ../../init.sh
-
 ### START_AP.SH ###
 
 ##############################

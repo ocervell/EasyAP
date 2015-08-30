@@ -1,4 +1,6 @@
 #!/bin/bash
+### MANUAL.TXT ###
+### Scripts and important commands for EasyAP ###
 
 $dev    #name of the WLAN interface (e.g wlan1, wlan2)
 $phydev #name of the physical interface (e.g phy0)
@@ -7,6 +9,10 @@ $phydev #name of the physical interface (e.g phy0)
 #####################
 ### MAIN SCRIPTS  ###
 #####################
+source configure
+ #checks if you're running Ubuntu
+ #sets up environment variables
+ #sudo apt-get install required tools
 
 ./start.sh $dev
  #stop network manager (required for the AP to work)
