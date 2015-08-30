@@ -15,17 +15,17 @@ source configure
  #sudo apt-get install required tools
 
 ./start.sh $dev
- #stop network manager (required for the AP to work)
- #launch an AP on $interface (usually wlan1, wlan2 or wlan3)
- #create monitor interface mon0
+ #stops network manager (required for the AP to work)
+ #launches an AP on $interface (usually wlan1, wlan2 or wlan3)
+ #creates monitor interface mon0
  #monitoring and dumping log in logs folder 
 
 ./stop.sh $dev
- #kill all network processes (hostapd, aircrack-ng suite ...)
- #stop AP running on $dev
- #stop monitoring
- #remove monitor interface mon0
- #restart network-manager
+ #kills all network processes (hostapd, aircrack-ng suite ...)
+ #stops AP running on $dev
+ #stops monitoring
+ #removes monitor interface mon0
+ #restarts network-manager
  
 
 ######################
@@ -35,11 +35,11 @@ source configure
 #$wconfig variable is exported to this folder by running 'export $wconfig="$PWD"'
 
 #... located in scripts folder
-./scripts/psm_on.sh $dev      #turn on psm on $dev interface
-./scripts/psm_off.sh $dev     #turn off psm on $dev interface
-./scripts/start_ap.sh $dev    #start an Access Point on $dev
-./scripts/stop_ap.sh $dev     #stop an Access Point running on $dev
-./scripts/monitor_ap.sh $dev  #create a new monitor interface mon0 and record packets
+./scripts/psm_on.sh $dev      #turns on psm on $dev interface
+./scripts/psm_off.sh $dev     #turns off psm on $dev interface
+./scripts/start_ap.sh $dev    #starts an Access Point on $dev
+./scripts/stop_ap.sh $dev     #stops an Access Point running on $dev
+./scripts/monitor_ap.sh $dev  #creates a new monitor interface mon0 and record packets
 			      #dump file is saved in logs/name.cap
 
 ###########################
