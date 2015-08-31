@@ -15,7 +15,7 @@ Note: The hardware device has to be compatible with AP MODE and MONITOR MODE. If
 
 **1. Initial configuration**
 
-`./configure`  
+`source configure`  
 * export a global variable in your ~/.bashrc file.
 * install all necessary tools using apt-get install.
 
