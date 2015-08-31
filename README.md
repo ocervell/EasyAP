@@ -9,7 +9,14 @@
 * EasyAP also sets up a monitoring interface and generate dump files using the aircrack-ng suite. Dump files are generated and can be analyzed with wireshark.
 * EasyAP enables debugging and tracing for Atheros drivers, if your kernel has been compiled with the right options.  
 * EasyAP can also enable PSM (Power Save Mode) if your wireless driver supports it.
-Note: The hardware device has to be compatible with AP MODE and MONITOR MODE. If it is not, the scripts won't work.
+
+**Note:** The wireless card of the device has to be compatible with AP MODE and MONITOR MODE. If it is not, the scripts won't work. It is usually not the case for smartphone and you might have to add an USB Wireless Card that supports those modes.
+
+##**What's left to do**
+* Debugging and tracing activation for other drivers than ath9k_htc.
+* Improving logs
+* Create a Command Line Interface (CLI).
+* Create a Graphical User Interface (GUI).
 
 ##**Getting Started**
 
