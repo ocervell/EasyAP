@@ -32,8 +32,8 @@ get a similar tree than the one showed below (only important files are shown).
 ```
 
 EasyAP
-├── README.md		#GitHub ReadMe file
-├── manual.txt		#manual for scripts and commands
+├── README.md		    #GitHub ReadMe file
+├── manual.txt		    #manual for scripts and commands
 ├── start.sh            #start AP, start monitoring and turn Power Save on
 ├── stop.sh             #stop AP, stop monitoring and turn Power Save off
 ├── cleanup.sh          #delete all archived log (clear 'archive' folder)
