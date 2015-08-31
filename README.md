@@ -16,13 +16,13 @@ Note: The hardware device has to be compatible with AP MODE and MONITOR MODE. If
 **1. Initial configuration**
 
 `source configure`  
-* export a global variable in your ~/.bashrc file.
-* install all necessary tools using apt-get install.
+* exports a global variable in your ~/.bashrc file.
+* installs all necessary tools using apt-get install.
 
 **2. Play with the scripts**
 
 * In the 'scripts' folder, you will find shell scripts that will make your life easy.
-* Scripts are detailed in 'manual.txt' file, along with instructions.
+* Scripts behaviour is detailed in 'manual.txt' file, along with instructions.
 
 ##**Project Tree**
 
