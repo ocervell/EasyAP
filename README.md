@@ -29,7 +29,7 @@
 **2. Play with the scripts**
 
 * In the 'scripts' folder, you will find shell scripts that will make your life easy.
-* Scripts behaviour is detailed in 'manual.txt' file, along with instructions.
+* Scripts behaviour is detailed in 'manual.txt' file, along with instructions and useful commands.
 
 ##**Project Tree**
 
