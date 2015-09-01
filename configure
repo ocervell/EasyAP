@@ -1,6 +1,12 @@
 #!/bin/bash
 ### CONFIGURE ###
 
+echo ""
+echo "=============================="
+echo "===> CONFIGURATION SCRIPT <==="
+echo "=============================="
+echo ""
+
 #Main environment variable
 EasyAP=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd ) #Main folder Path
 export EasyAP=$EasyAP
