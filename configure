@@ -26,9 +26,21 @@ then
    echo "Ubuntu detected."
    rm tmp.txt
    echo "Installing required utilites ..."
-   sudo apt-get -y install wget curl hostapd aircrack-ng wireshark
+   sudo apt-get -y install wget curl hostapd aircrack-ng wireshark isc-dhcp-server dnsmasq
 else
    echo "Ubuntu not detected. Commands like 'apt-get' included in this script won't work. Run them manually"
    rm tmp.txt
    sleep 2
+fi
+
+
+### Enable PSM options for ath9k_htc ###
+file=/etc/modprobe.d/ath9kps.conf
+
+if [ ! -e "$file" ] ; then
+	sudo touch $file
+	echo "options ath9k_htc ps_enable=1" | sudo tee --append $file
+	echo "options ath9k ps_enable=1" | sudo tee --append $file
+else
+	exit 1;
 fi
