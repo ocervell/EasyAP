@@ -68,6 +68,7 @@ case $yn in
 esac
 echo ""
 
+sleep 5
 echo "===> Archiving logs <==="
 read -p "Archive logs (y/n)? " yn
 case $yn in

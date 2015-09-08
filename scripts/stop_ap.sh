@@ -45,8 +45,9 @@ echo "===> Stop Access Point (AP) <==="
 echo "Killing running processes ..."
 sudo airmon-ng check kill
 
-echo "Killing dnsmasq ..."
-killall dnsmasq
+echo "Deleting bridge br0 ..."
+sudo ifconfig br0 down
+sudo brctl delbr br0
 
 echo "Killing hostapd ..."
 sudo kill $(ps aux | grep hostapd | awk '{print $2}')
