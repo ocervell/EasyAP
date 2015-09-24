@@ -65,16 +65,14 @@ echo ""
 echo "Stopping Network Manager to avoid problems..."
 sudo service network-manager stop
 
-
-echo ""
-echo "Configuring IP Forwarding ..."
-sudo sysctl -w net.ipv4.ip_forward=1
-wlanno="${dev: -1}"
-sudo rfkill unblock $wlanno
-
 read -p "Are you connected to the network on Ethernet ? (y/N) " yn 
 case $yn in
 [Yy]* ) echo ""
+        echo "Configuring IP Forwarding ..."
+        sudo sysctl -w net.ipv4.ip_forward=1
+        wlanno="${dev: -1}"
+        sudo rfkill unblock $wlanno
+        echo ""
 		echo "Creating bridge between AP interface ($dev) and Internet interface ($phydev) ..."
 		sudo ifconfig eth0 down
 		sudo ifconfig eth0 0.0.0.0 promisc up
